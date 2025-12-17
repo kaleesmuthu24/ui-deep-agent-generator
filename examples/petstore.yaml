@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  title: Petstore Sample
+  version: 1.0.0
+servers:
+  - url: https://petstore3.swagger.io/api/v3
+paths:
+  /pet/findByStatus:
+    get:
+      tags: [Pet]
+      summary: Find pets by status
+      operationId: findPetsByStatus
+      parameters:
+        - name: status
+          in: query
+          required: true
+          schema:
+            type: string
+  /pet:
+    post:
+      tags: [Pet]
+      summary: Add a new pet
+      operationId: addPet
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+  /store/inventory:
+    get:
+      tags: [Store]
+      summary: Returns pet inventories by status
+      operationId: getInventory

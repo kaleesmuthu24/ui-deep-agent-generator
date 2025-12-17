@@ -1,0 +1,49 @@
+{
+  "appName": "AccountsConsole",
+  "pages": [
+    {
+      "name": "Accounts",
+      "route": "/accounts",
+      "sections": [
+        {
+          "type": "table",
+          "title": "Account List",
+          "source": {
+            "kind": "openapi",
+            "operationId": "listAccounts"
+          }
+        },
+        {
+          "type": "form",
+          "title": "Create Account",
+          "source": {
+            "kind": "openapi",
+            "operationId": "createAccount"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Payments",
+      "route": "/payments",
+      "sections": [
+        {
+          "type": "table",
+          "title": "Payments",
+          "source": {
+            "kind": "openapi",
+            "operationId": "listPayments"
+          }
+        },
+        {
+          "type": "form",
+          "title": "Submit Payment",
+          "source": {
+            "kind": "openapi",
+            "operationId": "submitPayment"
+          }
+        }
+      ]
+    }
+  ]
+}
